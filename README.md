@@ -1,3 +1,5 @@
 DataScientest Data Engineer Course
 
-Final Project - with KSuljic and CAdel
+New York Times API Data Pipeline
+
+Final Project - with KSuljic and AdelRCh
