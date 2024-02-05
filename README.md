@@ -62,7 +62,8 @@ The Dash page provides:
 - live article search
 - on another page the average word count per article per section
 
-```submit spark jobs using
+```
+submit spark jobs using
 ```
 
 ### Overview
