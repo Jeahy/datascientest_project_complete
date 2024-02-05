@@ -1,29 +1,9 @@
-DataScientest Data Engineer Course
-
-New York Times API Data Pipeline
-
-Final Project - with [KSuljic](https://github.com/KSuljic) and [AdelRCh](https://github.com/AdelRCh)
-
-My contributions:
-- basic Dash website
-- API
-- request script to load book review data in database
-- images/architecture.png
-
-
 # New York Times API Data Pipeline
 
 <img src="https://github.com/Jeahy/datascientest_project_complete/blob/main/images/nyt_developers.png" align="centre">
 
-
 Final Project of the DataScientest Data Engineer Course
-created in collaboration with KSuljic and AdelRCh
-
-My contributions:
-- basic Dash website
-- API
-- request script to load book review data in database
-- images/architecture.png
+created in collaboration with [KSuljic](https://github.com/KSuljic) and [AdelRCh](https://github.com/AdelRCh)
 
 
 ## Architecture 
@@ -36,7 +16,16 @@ Pipeline Consists of various modules:
  - Redshift Warehouse Module
  - Analytics Module 
 
-#### Overview
+### Project Task
+![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/project_task.png)
+
+My contributions:
+- basic Dash website
+- API
+- request script to load book review data in database
+- images/architecture.png
+
+### Overview
 Data is captured in real time from the goodreads API using the Goodreads Python wrapper (View usage - [Fetch Data Module](https://github.com/san089/goodreads/blob/master/example/fetchdata.py)). The data collected from the goodreads API is stored on local disk and is timely moved to the Landing Bucket on AWS S3. ETL jobs are written in spark and scheduled in airflow to run every 10 minutes.  
 
 ### ETL Flow
