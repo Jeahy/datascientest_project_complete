@@ -13,10 +13,10 @@ My contributions:
 
 # New York Times API Data Pipeline
 
-<img src="https://github.com/Jeahy/datascientest_project_complete/images/nyt_developers.png" align="centre">
+<img src="https://github.com/Jeahy/datascientest_project_complete/blob/main/images/nyt_developers.png" align="centre">
 
 ## Architecture 
-![Pipeline Architecture](https://github.com/Jeahy/datascientest_project_complete/images/architecture.png)
+![Pipeline Architecture](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/architecture.png)
 
 Pipeline Consists of various modules:
 
