@@ -34,7 +34,7 @@ Pipeline Consists of various modules:
     - volume
 
 
-### Project Task
+## Project Task
 ![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/project_task.png)
 
 My contributions:
