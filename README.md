@@ -23,9 +23,9 @@ created in collaboration with [KSuljic](https://github.com/KSuljic) and [AdelRCh
    - PyMongo Pipeline
    - saving aggregated data in collection
 7. Data Serving
-   a) Website
+   - Website
      - Dash/Plotly
-   b) API
+   - API
      - FastApi
      - Basic Authentication
 9. Dockerization
@@ -35,17 +35,82 @@ created in collaboration with [KSuljic](https://github.com/KSuljic) and [AdelRCh
     - volume
 
 #### My contributions:
-- basic Dash website
-- API
-- request script to load book review data in database (that we didn't need in the end)
+- Data Mining: script to load book review data in database (that we didn't need in the end)
+- Data Aggregation: of the data for parts of the Dash website
+- Data Serving: part of the Dash website
+- Data Serving: API
 
 
 
 ## Project Task
 ![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/project_task.png)
 
-
-
+## Data Aggregation
+```
+pipeline = [
+    {
+        '$group': {
+            '_id': '$news_desk',
+            # 'section_word_count': {'$sum': '$word_count'},
+            'section_word_count': {'$avg': '$word_count'},
+            'section_article_count': {'$sum': 1},
+            'newest_articles': {
+                '$push': {
+                    'headline': '$headline',
+                    'web_url': '$web_url',
+                    'pub_date': '$pub_date'
+                }
+            }
+        }
+    },
+    {
+        '$group': {
+            '_id': None,
+            'average_word_count': {'$avg': '$section_word_count'},
+            'total_article_count': {'$sum': '$section_article_count'},
+            'sections': {
+                '$push': {
+                    'section': '$_id',
+                    'average_word_count': {'$avg': '$section_word_count'},
+                    'article_count': '$section_article_count'
+                }
+            },
+            'all_articles': {'$push': '$newest_articles'}
+        }
+    },
+    {
+        '$project': {
+            'average_word_count': 1,
+            'total_article_count': 1,
+            'sections': 1,
+            # Flatten the array of arrays
+            'flattened_articles': {'$reduce': {
+                'input': '$all_articles',
+                'initialValue': [],
+                'in': {'$concatArrays': ['$$value', '$$this']}
+            }}
+        }
+    },
+    {
+        '$unwind': '$flattened_articles'
+    },
+    {
+        '$sort': {'flattened_articles.pub_date': -1}
+    },
+    {
+        '$limit': 5
+    },
+    {
+        '$group': {
+            '_id': '$_id',
+            'average_word_count': {'$first': '$average_word_count'},
+            'total_article_count': {'$first': '$total_article_count'},
+            'sections': {'$first': '$sections'},
+            'newest_articles': {'$push': '$flattened_articles'}
+        }
+    }
+]
+```
 ## Dash Website
 ![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/dash_page.png)
 
@@ -62,7 +127,5 @@ The Dash page provides:
 ![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/api2.png)
 
 
-```
-tbd
-```
+
 
