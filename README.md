@@ -13,6 +13,7 @@ created in collaboration with [KSuljic](https://github.com/KSuljic) and [AdelRCh
 #### Pipeline Consists of various modules:
 
 1. Data Mining
+   - https://developer.nytimes.com/apis
    - requests library
 3. Database
    - MongoDB
