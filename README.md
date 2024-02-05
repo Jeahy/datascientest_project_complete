@@ -2,7 +2,7 @@
 
 <img src="https://github.com/Jeahy/datascientest_project_complete/blob/main/images/nyt_developers.png" align="centre">
 
-Final Project of the DataScientest Data Engineer Course
+#### Final project of the DataScientest Data Engineer course
 created in collaboration with [KSuljic](https://github.com/KSuljic) and [AdelRCh](https://github.com/AdelRCh)
 
 
