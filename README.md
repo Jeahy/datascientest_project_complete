@@ -10,7 +10,7 @@ created in collaboration with [KSuljic](https://github.com/KSuljic) and [AdelRCh
 ## Architecture 
 ![Pipeline Architecture](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/architecture.png)
 
-Pipeline Consists of various modules:
+# Pipeline Consists of various modules:
 
 1. Data Mining
    - requests library
@@ -34,15 +34,15 @@ Pipeline Consists of various modules:
     - several ports
     - volume
 
+# My contributions:
+- basic Dash website
+- API
+- request script to load book review data in database (that we didn't need in the end)
+
 
 
 ## Project Task
 ![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/project_task.png)
-
-My contributions:
-- basic Dash website
-- API
-- request script to load book review data in database (that we didn't need in the end)
 
 
 
@@ -60,11 +60,7 @@ The Dash page provides:
 ## API
 ![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/api1.png)
 ![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/api2.png)
-The Dash page provides:
-- some basic stats: number of articles and average wordcount
-- 5 latest articels that have been loaded into the database
-- live article search
-- on another page the average word count per article per section
+
 
 ```
 tbd
