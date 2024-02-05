@@ -22,9 +22,27 @@ Pipeline Consists of various modules:
 My contributions:
 - basic Dash website
 - API
-- request script to load book review data in database
-- images/architecture.png
+- request script to load book review data in database (that we didn't need in the end)
 
+### Project Task
+![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/dash_page.png)
+
+The Dash page provides:
+- some basic stats: number of articles and average wordcount
+- 5 latest articels that have been loaded into the database
+- live article search
+- on another page the average word count per article per section
+
+
+### API
+![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/api1.png)
+![Project Task](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/api2.png)
+The Dash page provides:
+- some basic stats: number of articles and average wordcount
+- 5 latest articels that have been loaded into the database
+- live article search
+- on another page the average word count per article per section
+  
 ### Overview
 Data is captured in real time from the goodreads API using the Goodreads Python wrapper (View usage - [Fetch Data Module](https://github.com/san089/goodreads/blob/master/example/fetchdata.py)). The data collected from the goodreads API is stored on local disk and is timely moved to the Landing Bucket on AWS S3. ETL jobs are written in spark and scheduled in airflow to run every 10 minutes.  
 
