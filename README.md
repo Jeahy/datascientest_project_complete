@@ -10,12 +10,12 @@ My contributions:
 - request script to load book review data in database
 
 
-# GoodReads Data Pipeline
+# New York Times API Data Pipeline
 
-<img src="https://github.com/san089/goodreads_etl_pipeline/blob/master/docs/images/goodreads.png" align="centre">
+<img src="https://github.com/jeahy/images/nyt_developers.png" align="centre">
 
 ## Architecture 
-![Pipeline Architecture](https://github.com/san089/goodreads_etl_pipeline/blob/master/docs/images/architecture.png)
+![Pipeline Architecture](https://github.com/jeahy/images/architecture.png)
 
 Pipeline Consists of various modules:
 
