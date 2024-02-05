@@ -10,7 +10,7 @@ created in collaboration with [KSuljic](https://github.com/KSuljic) and [AdelRCh
 ## Architecture 
 ![Pipeline Architecture](https://github.com/Jeahy/datascientest_project_complete/blob/main/images/architecture.png)
 
-# Pipeline Consists of various modules:
+#### Pipeline Consists of various modules:
 
 1. Data Mining
    - requests library
@@ -34,7 +34,7 @@ created in collaboration with [KSuljic](https://github.com/KSuljic) and [AdelRCh
     - several ports
     - volume
 
-# My contributions:
+#### My contributions:
 - basic Dash website
 - API
 - request script to load book review data in database (that we didn't need in the end)
